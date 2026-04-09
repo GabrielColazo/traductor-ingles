@@ -1,0 +1,74 @@
+// _testimonios.scss
+@use 'variables' as *;
+
+// ── Sección Testimonios ──────────────────────────────────
+#testimonios {
+
+  // ── Cards ────────────────────────────────────────────
+  .testimonial-card {
+    background-color: $white;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+    cursor: default;
+
+    // ── Animación entrada (controlada desde JS) ──────
+    opacity: 0;
+    transform: translateY(30px);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    // ── Hover ────────────────────────────────────────
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-lg;
+    }
+
+    // ── Línea dorada superior al hover ───────────────
+    border-top: 3px solid transparent;
+
+    &:hover {
+      border-top-color: $accent-color;
+    }
+  }
+
+  // ── Estrellas ────────────────────────────────────────
+  .stars {
+    i {
+      color: $accent-soft;
+      font-size: 1rem;
+    }
+  }
+
+  // ── Texto del testimonio ─────────────────────────────
+  .testimonial-text {
+    font-size: 0.95rem;
+    color: $text-muted;
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  // ── Autor ────────────────────────────────────────────
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba($text-muted, 0.15);
+
+    strong {
+      font-family: $font-body;
+      font-size: 0.95rem;
+      color: $text-dark;
+    }
+
+    span {
+      font-size: 0.8rem;
+      color: $text-light;
+    }
+  }
+}

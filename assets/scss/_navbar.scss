@@ -1,0 +1,100 @@
+// _navbar.scss
+@use 'variables' as *;
+
+// ── Navbar base ──────────────────────────────────────────
+#mainNavbar {
+  background-color: transparent;
+  padding: 1.2rem 0;
+  transition: $transition-base;
+
+  // ── Estado al hacer scroll ───────────────────────────
+  &.scrolled {
+    background-color: $primary-color;
+    padding: 0.7rem 0;
+    box-shadow: $shadow-md;
+  }
+
+  // ── Brand ────────────────────────────────────────────
+  .navbar-brand {
+    font-family: $font-header;
+    font-size: 1.3rem;
+    color: $white;
+    letter-spacing: 0.3px;
+
+    span {
+      color: $accent-soft;
+      font-family: $font-body;
+      font-size: 0.85rem;
+      font-weight: 300;
+      margin-left: 4px;
+    }
+
+    &:hover {
+      color: $accent-soft;
+    }
+  }
+
+  // ── Links ────────────────────────────────────────────
+  .nav-link {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba($white, 0.85) !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 0.2rem;
+    position: relative;
+
+    // ── Hover con línea animada ──────────────────────
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $accent-soft;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      color: $white !important;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: $accent-soft !important;
+
+      &::after {
+        width: 100%;
+        background-color: $accent-soft;
+      }
+    }
+  }
+
+  // ── Toggler mobile ───────────────────────────────────
+  .navbar-toggler {
+    border-color: rgba($white, 0.4);
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // ── Menú mobile ──────────────────────────────────────
+  @media (max-width: 991px) {
+    background-color: $primary-color;
+    padding: 0.8rem 0;
+
+    .nav-link {
+      padding: 0.6rem 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+// _footer.scss
+@use 'variables' as *;
+
+// ── Footer ───────────────────────────────────────────────
+#footer {
+  background-color: $dark-bg;
+  padding: 2rem 0;
+
+  // ── Texto principal ──────────────────────────────────
+  p {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: rgba($white, 0.6);
+    margin-bottom: 0.3rem;
+  }
+
+  // ── Crédito GaboWeb ──────────────────────────────────
+  .footer-credit {
+    font-size: 0.78rem;
+    color: rgba($white, 0.4);
+
+    a {
+      color: $accent-soft;
+      font-weight: 600;
+      text-decoration: none;
+      transition: $transition-base;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  // ── Separador sutil ──────────────────────────────────
+  &::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, $accent-color, $accent-soft);
+    margin: 0 auto 1.5rem;
+  }
+}
+
+// ── Redes sociales ───────────────────────────────────
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba($white, 0.2);
+      color: rgba($white, 0.6);
+      font-size: 1rem;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: $white;
+        transform: translateY(-3px);
+      }
+    }
+  }

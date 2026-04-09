@@ -1,0 +1,60 @@
+// _servicios.scss
+@use 'variables' as *;
+
+// ── Sección Servicios ────────────────────────────────────
+#servicios {
+
+  // ── Cards ────────────────────────────────────────────
+  .service-card {
+    background-color: $white;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+    cursor: default;
+
+    // ── Animación entrada (controlada desde JS) ──────
+    opacity: 0;
+    transform: translateY(30px);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    // ── Hover ────────────────────────────────────────
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: $shadow-lg;
+
+      .service-icon i {
+        color: $accent-color;
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  // ── Ícono ────────────────────────────────────────────
+  .service-icon {
+    i {
+      font-size: 2.4rem;
+      color: $secondary-color;
+      transition: $transition-base;
+    }
+  }
+
+  // ── Título de card ───────────────────────────────────
+  .card-title {
+    font-family: $font-header;
+    font-size: 1.15rem;
+    color: $text-dark;
+    margin-bottom: 0.6rem;
+  }
+
+  // ── Texto de card ────────────────────────────────────
+  .card-text {
+    font-size: 0.92rem;
+    color: $text-muted;
+    line-height: 1.7;
+  }
+}

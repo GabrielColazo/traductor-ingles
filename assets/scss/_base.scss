@@ -1,0 +1,128 @@
+
+// _base.scss
+@use 'variables' as *;
+
+// ── Reset y box-sizing ───────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── Scroll suave ─────────────────────────────────────────
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+// ── Body ─────────────────────────────────────────────────
+body {
+  font-family: $font-body;
+  color: $text-dark;
+  background-color: $white;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ── Tipografía general ───────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header;
+  color: $text-dark;
+  line-height: 1.2;
+}
+
+p {
+  font-family: $font-body;
+  color: $text-muted;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+// ── Secciones ────────────────────────────────────────────
+.section-padding {
+  padding: $section-padding 0;
+
+  @media (max-width: 768px) {
+    padding: $section-padding-sm 0;
+  }
+}
+
+.bg-light-custom {
+  background-color: $light-bg;
+}
+
+// ── Títulos de sección ───────────────────────────────────
+.section-title {
+  font-family: $font-header;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: $text-dark;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: $text-muted;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+// ── Texto lead personalizado ─────────────────────────────
+.lead-text {
+  font-size: 1.1rem;
+  color: $text-dark;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.text-muted-custom {
+  color: $text-muted;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+// ── Botón acento (dorado) ────────────────────────────────
+.btn-accent {
+  background-color: $accent-color;
+  color: $white;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: $border-radius-sm;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: $transition-base;
+
+  &:hover {
+    background-color: $accent-soft;
+    color: $white;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+// ── Barra de demo portfolio ──────────────────────────────
+#demo-bar {
+  background-color: rgba($primary-color, 0.85);
+  color: rgba($white, 0.85);
+  text-align: center;
+  font-size: 0.78rem;
+  padding: 7px 16px;
+  font-family: $font-body;
+  position: relative;
+  z-index: 1100;
+
+  a {
+    color: $accent-soft;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// _variables.scss
+
+// ── Colores Principales ──────────────────────────────────
+$primary-color:   #111827;  // Casi negro elegante (base general)
+$secondary-color: #1e3a5f;  // Azul marino profundo (confianza/profesionalismo)
+$accent-color:    #b8860b;  // Dorado oscuro (distinción, mundo literario)
+$accent-soft:     #d4a843;  // Dorado más claro (hovers, detalles)
+
+// ── Texto ────────────────────────────────────────────────
+$text-dark:       #111827;  // Títulos y textos principales
+$text-muted:      #64748b;  // Párrafos secundarios
+$text-light:      #94a3b8;  // Placeholders, notas al pie
+
+// ── Fondos ───────────────────────────────────────────────
+$white:           #ffffff;
+$light-bg:        #f8fafc;  // Fondo secciones alternas
+$dark-bg:         #0f172a;  // Footer / secciones oscuras
+
+// ── Tipografías ──────────────────────────────────────────
+$font-header: 'DM Serif Display', serif;
+$font-body:   'Plus Jakarta Sans', sans-serif;
+
+// ── Espaciados ───────────────────────────────────────────
+$section-padding:    80px;
+$section-padding-sm: 48px;  // Mobile
+
+// ── Bordes y Radios ──────────────────────────────────────
+$border-radius-sm:  6px;
+$border-radius-md:  12px;
+$border-radius-lg:  20px;
+
+// ── Sombras ──────────────────────────────────────────────
+$shadow-sm:  0 2px 8px rgba(0, 0, 0, 0.06);
+$shadow-md:  0 4px 20px rgba(0, 0, 0, 0.10);
+$shadow-lg:  0 8px 40px rgba(0, 0, 0, 0.14);
+
+// ── Transiciones ─────────────────────────────────────────
+$transition-base: all 0.3s ease;
